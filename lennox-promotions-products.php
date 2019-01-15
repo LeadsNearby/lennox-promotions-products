@@ -3,7 +3,7 @@
 Plugin URI: http://leadsnearby.com/
 Description: Creates shortcode to include Lennox Promotions and Special offers on website.
 
-Version: 1.0
+Version: 1.1.0
 Author: Leads Nearby
 Author URI: http://leadsnearby.com/
 License: GPLv2 or later
