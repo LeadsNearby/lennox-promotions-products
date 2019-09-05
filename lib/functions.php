@@ -9,6 +9,8 @@ function lennox_get_xml( $lennoxDataType = null, $lennoxDataID = null) {
 	$api_url = ( $lennoxDataType ) ? "http://api.lennox.com/v1/".$APIKEY."/".$lennoxDataType."/".$lennoxDataID : "http://api.lennox.com/v1/".$APIKEY."/categories";
 
 	// Get and return XML
-	$xml = simplexml_load_file( $api_url );
+	$response = wp_remote_get($api_url);
+	$body = wp_remote_retrieve_body($response);
+	$xml = simplexml_load_string($body);
 	return $xml;
 }
